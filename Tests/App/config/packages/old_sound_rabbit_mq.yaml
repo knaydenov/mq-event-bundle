@@ -1,0 +1,19 @@
+old_sound_rabbit_mq:
+  connections:
+    default:
+      url: 'amqp://guest:guest@rabbitmq:5672'
+  producers:
+    default:
+      connection: default
+      exchange_options: { name: 'default', type: 'topic' }
+
+  consumers:
+    default:
+      connection:       default
+      exchange_options: { name: 'default', type: 'topic' }
+      queue_options:
+        name: 'default'
+        routing_keys:
+        - default
+        - some.event
+      callback: Kna\MQEventBundle\Tests\App\Consumer\DefaultConsumer

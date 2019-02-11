@@ -1,0 +1,1 @@
+<?phpnamespace Kna\MQEventBundle;use Symfony\Component\HttpKernel\Bundle\Bundle;class KnaMQEventBundle extends Bundle{}

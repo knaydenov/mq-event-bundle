@@ -1,0 +1,30 @@
+{
+    "name": "kna/mq-event-bundle",
+    "description": "This package provides message queue event handling",
+    "type": "symfony-bundle",
+    "autoload" : {
+        "psr-4" : { "Kna\\MQEventBundle\\" : "" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kna\\MQEventBundle\\Tests\\App\\": "Tests/App/src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Klim Naydenov",
+            "email": "knaydenov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/framework-bundle": "^4.0",
+        "php-amqplib/rabbitmq-bundle": "^1.14",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.0",
+        "symfony/monolog-bundle": "^3.3"
+    }
+}

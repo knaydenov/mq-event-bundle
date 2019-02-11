@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Kna\MQEventBundle\Tests\App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+    Kna\MQEventBundle\Tests\App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
